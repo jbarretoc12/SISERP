@@ -162,7 +162,7 @@
             // 
             this.textBoxX2.Border.Class = "TextBoxBorder";
             this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.textBoxX2.Location = new System.Drawing.Point(294, 165);
+            this.textBoxX2.Location = new System.Drawing.Point(294, 217);
             this.textBoxX2.Name = "textBoxX2";
             this.textBoxX2.PreventEnterBeep = true;
             this.textBoxX2.Size = new System.Drawing.Size(207, 30);
