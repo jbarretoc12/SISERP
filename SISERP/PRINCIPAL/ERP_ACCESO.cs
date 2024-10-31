@@ -16,5 +16,10 @@ namespace SISERP.PRINCIPAL
         {
             InitializeComponent();
         }
+
+        private void ERP_ACCESO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,77 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+*.obj
+*.exe
+*.dll
+*.log
+*.tlog
+*.VC.db
+*.VC.opendb
+
+# Build Results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Package directories
+packages/
+node_modules/
+.vscode/
+
+# Visual Studio auto-generated files
+*.csproj.user
+*.sln.docstates
+
+# Windows Form Designer generated files
+#*.Designer.cs
+
+# NuGet
+*.nupkg
+# Uncomment if you have the `packages` directory and want to ignore it
+# **/packages/*
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# StyleCop
+StyleCop.Cache
+
+# Others
+*.resharper
+*.sln.iml
+# Temporary and other cache files
+_ReSharper*/
+.idea/
+.ionide/
+.gem/
+.sass-cache/
+*.vsidx
+*.vscode/
+.vs/
+# IDE data
+*.tvsuo
+
+# Coverlet Coverage
+coverage.*
+
+# Docker
+docker-compose.override.yml
+
+# Azure Functions
+.local.settings.json
+
+# DotNet CLI
+.project/
+
+# Others - Optional
+*.swp
+*~
+*.tmp
+*.[Bb]ackup
