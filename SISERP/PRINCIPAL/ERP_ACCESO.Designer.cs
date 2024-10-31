@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,15 +41,12 @@
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.symbolBox1 = new DevComponents.DotNetBar.Controls.SymbolBox();
             this.symbolBox2 = new DevComponents.DotNetBar.Controls.SymbolBox();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(113)))), ((int)(((byte)(176)))));
-            this.panel1.Controls.Add(this.buttonX2);
-            this.panel1.Controls.Add(this.textBoxX3);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -58,19 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 360);
             this.panel1.TabIndex = 0;
-            // 
-            // textBoxX3
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Location = new System.Drawing.Point(38, 129);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(167, 22);
-            this.textBoxX3.TabIndex = 14;
             // 
             // label7
             // 
@@ -212,17 +195,6 @@
             this.symbolBox2.TabIndex = 10;
             this.symbolBox2.Text = "symbolBox2";
             // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(38, 200);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(167, 23);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 15;
-            this.buttonX2.Text = "buttonX2";
-            // 
             // ERP_ACCESO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,7 +241,5 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
         private DevComponents.DotNetBar.Controls.SymbolBox symbolBox1;
         private DevComponents.DotNetBar.Controls.SymbolBox symbolBox2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
     }
 }
