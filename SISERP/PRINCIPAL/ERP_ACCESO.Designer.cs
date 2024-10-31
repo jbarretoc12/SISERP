@@ -39,6 +39,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.symbolBox1 = new DevComponents.DotNetBar.Controls.SymbolBox();
+            this.symbolBox2 = new DevComponents.DotNetBar.Controls.SymbolBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,12 +170,38 @@
             this.textBoxX2.Size = new System.Drawing.Size(207, 30);
             this.textBoxX2.TabIndex = 8;
             // 
+            // symbolBox1
+            // 
+            // 
+            // 
+            // 
+            this.symbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.symbolBox1.Location = new System.Drawing.Point(288, 172);
+            this.symbolBox1.Name = "symbolBox1";
+            this.symbolBox1.Size = new System.Drawing.Size(75, 23);
+            this.symbolBox1.TabIndex = 9;
+            this.symbolBox1.Text = "symbolBox1";
+            // 
+            // symbolBox2
+            // 
+            // 
+            // 
+            // 
+            this.symbolBox2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.symbolBox2.Location = new System.Drawing.Point(379, 172);
+            this.symbolBox2.Name = "symbolBox2";
+            this.symbolBox2.Size = new System.Drawing.Size(75, 23);
+            this.symbolBox2.TabIndex = 10;
+            this.symbolBox2.Text = "symbolBox2";
+            // 
             // ERP_ACCESO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(560, 360);
+            this.Controls.Add(this.symbolBox2);
+            this.Controls.Add(this.symbolBox1);
             this.Controls.Add(this.textBoxX2);
             this.Controls.Add(this.textBoxX1);
             this.Controls.Add(this.label6);
@@ -210,5 +238,7 @@
         private System.Windows.Forms.Label label7;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private DevComponents.DotNetBar.Controls.SymbolBox symbolBox1;
+        private DevComponents.DotNetBar.Controls.SymbolBox symbolBox2;
     }
 }
