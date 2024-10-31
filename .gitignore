@@ -6,7 +6,7 @@
 *.pdb
 *.obj
 *.exe
-*.dll
+#*.dll
 *.log
 *.tlog
 *.VC.db

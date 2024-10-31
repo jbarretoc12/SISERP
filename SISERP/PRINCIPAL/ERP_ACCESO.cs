@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,19 @@ namespace SISERP.PRINCIPAL
 
         private void ERP_ACCESO_Load(object sender, EventArgs e)
         {
+            cargarForm();
+        }
 
+        private void cargarForm()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
         }
     }
 }
