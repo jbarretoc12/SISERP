@@ -41,12 +41,14 @@
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.symbolBox1 = new DevComponents.DotNetBar.Controls.SymbolBox();
             this.symbolBox2 = new DevComponents.DotNetBar.Controls.SymbolBox();
+            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(113)))), ((int)(((byte)(176)))));
+            this.panel1.Controls.Add(this.textBoxX3);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -60,7 +62,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(57, 164);
+            this.label7.Location = new System.Drawing.Point(53, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 25);
             this.label7.TabIndex = 13;
@@ -194,6 +196,19 @@
             this.symbolBox2.TabIndex = 10;
             this.symbolBox2.Text = "symbolBox2";
             // 
+            // textBoxX3
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX3.Border.Class = "TextBoxBorder";
+            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX3.Location = new System.Drawing.Point(54, 182);
+            this.textBoxX3.Name = "textBoxX3";
+            this.textBoxX3.PreventEnterBeep = true;
+            this.textBoxX3.Size = new System.Drawing.Size(100, 22);
+            this.textBoxX3.TabIndex = 14;
+            // 
             // ERP_ACCESO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,5 +255,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
         private DevComponents.DotNetBar.Controls.SymbolBox symbolBox1;
         private DevComponents.DotNetBar.Controls.SymbolBox symbolBox2;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
     }
 }
