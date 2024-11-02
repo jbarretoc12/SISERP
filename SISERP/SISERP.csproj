@@ -52,6 +52,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\dcondori\Desktop\OCTUBRE\Fuente_Mantenimientos\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,6 +68,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMINISTRADOR\ERP_ADM_EMPRESAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMINISTRADOR\ERP_ADM_EMPRESAS.Designer.cs">
+      <DependentUpon>ERP_ADM_EMPRESAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\ERP_GLOBALES.cs" />
     <Compile Include="PRINCIPAL\ERP_ACCESO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +83,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ADMINISTRADOR\ERP_ADM_EMPRESAS.resx">
+      <DependentUpon>ERP_ADM_EMPRESAS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRINCIPAL\ERP_ACCESO.resx">
       <DependentUpon>ERP_ACCESO.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +98,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,6 +126,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ALMACEN\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CAPA_DATOS\CAPA_DATOS.csproj">
+      <Project>{9a056267-313b-4472-9609-30df84c78a23}</Project>
+      <Name>CAPA_DATOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAPA_NEGOCIOS\CAPA_NEGOCIOS.csproj">
+      <Project>{a9114456-4b1f-4427-b258-416e3278ef16}</Project>
+      <Name>CAPA_NEGOCIOS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

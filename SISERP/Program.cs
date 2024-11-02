@@ -16,7 +16,7 @@ namespace SISERP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PRINCIPAL.ERP_ACCESO());
+            Application.Run(new ADMINISTRADOR.ERP_ADM_EMPRESAS());
         }
     }
 }

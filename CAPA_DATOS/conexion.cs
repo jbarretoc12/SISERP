@@ -8,5 +8,12 @@ namespace CAPA_DATOS
 {
     public class conexion
     {
+        public static string cadena
+        {
+            get
+            {
+                return "server=localhost;database=bd_siserp;Uid=root;pwd=;";
+            }
+        }
     }
 }
