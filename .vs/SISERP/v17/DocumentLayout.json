@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "D:\\REPOSITORIO_1\\SISERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|d:\\repositorio_1\\siserp\\siserp\\administrador\\erp_adm_empresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|solutionrelative:siserp\\administrador\\erp_adm_empresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|d:\\repositorio_1\\siserp\\siserp\\administrador\\erp_adm_empresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|solutionrelative:siserp\\administrador\\erp_adm_empresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A056267-313B-4472-9609-30DF84C78A23}|CAPA_DATOS\\CAPA_DATOS.csproj|d:\\repositorio_1\\siserp\\capa_datos\\administrador\\dat_administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A056267-313B-4472-9609-30DF84C78A23}|CAPA_DATOS\\CAPA_DATOS.csproj|solutionrelative:capa_datos\\administrador\\dat_administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9114456-4B1F-4427-B258-416E3278EF16}|CAPA_NEGOCIOS\\CAPA_NEGOCIOS.csproj|d:\\repositorio_1\\siserp\\capa_negocios\\administrador\\neg_administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9114456-4B1F-4427-B258-416E3278EF16}|CAPA_NEGOCIOS\\CAPA_NEGOCIOS.csproj|D:\\REPOSITORIO_1\\SISERP\\capa_negocios\\administrador\\neg_administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9114456-4B1F-4427-B258-416E3278EF16}|CAPA_NEGOCIOS\\CAPA_NEGOCIOS.csproj|solutionrelative:capa_negocios\\administrador\\neg_administrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A056267-313B-4472-9609-30DF84C78A23}|CAPA_DATOS\\CAPA_DATOS.csproj|d:\\repositorio_1\\siserp\\capa_datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|d:\\repositorio_1\\siserp\\siserp\\clases\\erp_funciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|solutionrelative:siserp\\clases\\erp_funciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|D:\\REPOSITORIO_1\\SISERP\\siserp\\administrador\\erp_adm_empresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|solutionrelative:siserp\\administrador\\erp_adm_empresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|D:\\REPOSITORIO_1\\SISERP\\siserp\\administrador\\erp_adm_empresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5457ADD1-300F-4449-8641-799156542AC9}|SISERP\\SISERP.csproj|solutionrelative:siserp\\administrador\\erp_adm_empresas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A056267-313B-4472-9609-30DF84C78A23}|CAPA_DATOS\\CAPA_DATOS.csproj|D:\\REPOSITORIO_1\\SISERP\\capa_datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A056267-313B-4472-9609-30DF84C78A23}|CAPA_DATOS\\CAPA_DATOS.csproj|solutionrelative:capa_datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,55 +41,57 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DAT_ADMINISTRADOR.cs",
-              "DocumentMoniker": "D:\\REPOSITORIO_1\\SISERP\\CAPA_DATOS\\ADMINISTRADOR\\DAT_ADMINISTRADOR.cs",
-              "RelativeDocumentMoniker": "CAPA_DATOS\\ADMINISTRADOR\\DAT_ADMINISTRADOR.cs",
-              "ToolTip": "D:\\REPOSITORIO_1\\SISERP\\CAPA_DATOS\\ADMINISTRADOR\\DAT_ADMINISTRADOR.cs",
-              "RelativeToolTip": "CAPA_DATOS\\ADMINISTRADOR\\DAT_ADMINISTRADOR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ERP_FUNCIONES.cs",
+              "DocumentMoniker": "D:\\REPOSITORIO_1\\SISERP\\SISERP\\Clases\\ERP_FUNCIONES.cs",
+              "RelativeDocumentMoniker": "SISERP\\Clases\\ERP_FUNCIONES.cs",
+              "ToolTip": "D:\\REPOSITORIO_1\\SISERP\\SISERP\\Clases\\ERP_FUNCIONES.cs",
+              "RelativeToolTip": "SISERP\\Clases\\ERP_FUNCIONES.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAwwIsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T17:09:35.374Z",
+              "WhenOpened": "2024-11-02T17:33:51.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "NEG_ADMINISTRADOR.cs",
-              "DocumentMoniker": "D:\\REPOSITORIO_1\\SISERP\\CAPA_NEGOCIOS\\ADMINISTRADOR\\NEG_ADMINISTRADOR.cs",
-              "RelativeDocumentMoniker": "CAPA_NEGOCIOS\\ADMINISTRADOR\\NEG_ADMINISTRADOR.cs",
-              "ToolTip": "D:\\REPOSITORIO_1\\SISERP\\CAPA_NEGOCIOS\\ADMINISTRADOR\\NEG_ADMINISTRADOR.cs",
-              "RelativeToolTip": "CAPA_NEGOCIOS\\ADMINISTRADOR\\NEG_ADMINISTRADOR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T17:08:59.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ERP_ADM_EMPRESAS.cs",
-              "DocumentMoniker": "D:\\REPOSITORIO_1\\SISERP\\SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
-              "RelativeDocumentMoniker": "SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
-              "ToolTip": "D:\\REPOSITORIO_1\\SISERP\\SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
-              "RelativeToolTip": "SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAAAmwNcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T17:07:11.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ERP_ADM_EMPRESAS.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\REPOSITORIO_1\\SISERP\\SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
               "RelativeDocumentMoniker": "SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
               "ToolTip": "D:\\REPOSITORIO_1\\SISERP\\SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs [Dise\u00F1o]",
               "RelativeToolTip": "SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T17:01:54.456Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-02T03:34:39.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NEG_ADMINISTRADOR.cs",
+              "DocumentMoniker": "D:\\REPOSITORIO_1\\SISERP\\CAPA_NEGOCIOS\\ADMINISTRADOR\\NEG_ADMINISTRADOR.cs",
+              "RelativeDocumentMoniker": "CAPA_NEGOCIOS\\ADMINISTRADOR\\NEG_ADMINISTRADOR.cs",
+              "ToolTip": "D:\\REPOSITORIO_1\\SISERP\\CAPA_NEGOCIOS\\ADMINISTRADOR\\NEG_ADMINISTRADOR.cs",
+              "RelativeToolTip": "CAPA_NEGOCIOS\\ADMINISTRADOR\\NEG_ADMINISTRADOR.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:08:59.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ERP_ADM_EMPRESAS.cs",
+              "DocumentMoniker": "D:\\REPOSITORIO_1\\SISERP\\SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
+              "RelativeDocumentMoniker": "SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
+              "ToolTip": "D:\\REPOSITORIO_1\\SISERP\\SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
+              "RelativeToolTip": "SISERP\\ADMINISTRADOR\\ERP_ADM_EMPRESAS.cs",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAAAJAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:07:11.599Z"
             },
             {
               "$type": "Document",
@@ -101,8 +103,7 @@
               "RelativeToolTip": "CAPA_DATOS\\conexion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T16:57:00.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T16:57:00.158Z"
             }
           ]
         }

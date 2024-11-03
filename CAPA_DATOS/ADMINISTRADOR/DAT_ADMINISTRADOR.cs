@@ -12,10 +12,10 @@ namespace CAPA_DATOS.ADMINISTRADOR
 {
     public static class DAT_ADMINISTRADOR
     {
-        public static DataTable sp_tb_empresas_ls(NEG_ADMINISTRADOR neg)
+        public static DataTable sp_tb_adm_empresas_ls(NEG_ADMINISTRADOR neg)
         {
             MySqlConnection cn = new MySqlConnection(conexion.cadena);
-            MySqlCommand cmd = new MySqlCommand("sp_tb_empresas_ls", cn);
+            MySqlCommand cmd = new MySqlCommand("sp_tb_adm_empresas_ls", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@p_opcion", MySqlDbType.Int32).Value = neg.Opcion;
             cmd.Parameters.Add("@p_criterio", MySqlDbType.VarChar).Value = neg.Criterio;
@@ -25,10 +25,10 @@ namespace CAPA_DATOS.ADMINISTRADOR
             return dt;
         }
 
-        public static int sp_tb_empresas_gr(NEG_ADMINISTRADOR neg)
+        public static int sp_tb_adm_empresas_gr(NEG_ADMINISTRADOR neg)
         {
             MySqlConnection cn = new MySqlConnection(conexion.cadena);
-            MySqlCommand cmd = new MySqlCommand("sp_tb_empresas_gr", cn);
+            MySqlCommand cmd = new MySqlCommand("sp_tb_adm_empresas_gr", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@p_opc", MySqlDbType.Int32).Value = neg.Opc;
             cmd.Parameters.Add("@p_coEmp", MySqlDbType.VarChar).Value = neg.CoEmp;

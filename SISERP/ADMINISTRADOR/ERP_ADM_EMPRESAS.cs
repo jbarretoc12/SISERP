@@ -22,7 +22,8 @@ namespace SISERP.ADMINISTRADOR
             InitializeComponent();
         }
         NEG_ADMINISTRADOR neg=new NEG_ADMINISTRADOR();
-        string headerText = "Rivera Diesel S.A.";
+        Clases.ERP_FUNCIONES fun=new Clases.ERP_FUNCIONES();
+        string headerText = "Sistema ERP";
         int opc;
         private void ERP_ADM_EMPRESAS_Load(object sender, EventArgs e)
         {
@@ -33,9 +34,12 @@ namespace SISERP.ADMINISTRADOR
         {
             try
             {
-                txtcoEmp.Enabled = true;
-                txtcoEmp.Select();
+                //fun.ERP_Habilitar_Botones(this, BTN_NUEVO, BTN_GRABAR, BTN_ELIMINAR, BTN_EDITAR, BTN_CANCELAR, BTN_LISTADO, BTN_AUDITORIA, true, Clases.Globales.Co_usuario, Clases.Globales.Co_sucu, Clases.Globales.Co_empresa, Clases.ERP_GLOBALES.formpermisos);
+                fun.Limpiar_Controles(this);
+                fun.Habilitar_Controles(this, false);
+                gbxListado.Enabled = true;
                 listar(1, "");
+                superTabControl1.SelectedTabIndex = 1;                
             }
             catch (Exception ex)
             {
@@ -49,7 +53,7 @@ namespace SISERP.ADMINISTRADOR
             {
                 neg.Opcion=opcion;
                 neg.Criterio=criterio;
-                System.Data.DataTable dt = DAT_ADMINISTRADOR.sp_tb_empresas_ls(neg);
+                System.Data.DataTable dt = DAT_ADMINISTRADOR.sp_tb_adm_empresas_ls(neg);
                 dgvDatos.Rows.Clear();
                 for (int x = 0; x < dt.Rows.Count; x++)
                 {
@@ -94,156 +98,131 @@ namespace SISERP.ADMINISTRADOR
             }
         }
 
-        private void btnAgregarEmpresa_Click(object sender, EventArgs e)
+        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                filtrar();
+            }
+        }
+
+        private void filtrar()
+        {
+            listar(1, txtFiltro.Text.Trim());
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            filtrar();
+        }
+
+        private void cargarDatos()
         {
             try
             {
-                #region VALIDACIONES
-                if (String.IsNullOrEmpty(txtcoEmp.Text.Trim()))
-                {
-                    MessageBoxEx.Show("* Ingresar el RUC.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtcoEmp.Select();
-                    return;
-                }
-
-                if (String.IsNullOrEmpty(txtrazSocial.Text.Trim()))
-                {
-                    MessageBoxEx.Show("* Ingresar la razón social.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtrazSocial.Select();
-                    return;
-                }
-
-                if (String.IsNullOrEmpty(txtnomComercial.Text.Trim()))
-                {
-                    MessageBoxEx.Show("* Ingresar el nombre comercial.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtnomComercial.Select();
-                    return;
-                }
-
-                if (String.IsNullOrEmpty(txtdirFiscal.Text.Trim()))
-                {
-                    MessageBoxEx.Show("* Ingresar la dirección fiscal.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtdirFiscal.Select();
-                    return;
-                }
-
-                if (String.IsNullOrEmpty(txttelefono.Text.Trim()))
-                {
-                    MessageBoxEx.Show("* Ingresar el teléfono o celular.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txttelefono.Select();
-                    return;
-                }
-
-                if (String.IsNullOrEmpty(txtpaginaWeb.Text.Trim()))
-                {
-                    MessageBoxEx.Show("* Ingresar su página web.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtpaginaWeb.Select();
-                    return;
-                }
-                #endregion
-                dgvDatos.Rows.Add();
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["coEmp"].Value = txtcoEmp.Text.Trim();
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["razSocial"].Value = txtrazSocial.Text.Trim();
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["nomComercial"].Value = txtnomComercial.Text.Trim();
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["dirFiscal"].Value = txtdirFiscal.Text.Trim();
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["telefono"].Value = txttelefono.Text.Trim();
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["paginaWeb"].Value = txtpaginaWeb.Text.Trim();
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["estado"].Value = "A";
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["st_registro"].Value = true;
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["co_usua_crea"].Value = "DCONDORI";
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["fe_usua_crea"].Value = DateTime.Now;
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["co_usua_modi"].Value = "";
-                dgvDatos.Rows[dgvDatos.Rows.Count - 1].Cells["fe_usua_modi"].Value = "";
-
-                neg.Opc = 1;
-                neg.CoEmp = txtcoEmp.Text.Trim();
-                neg.RazSocial = txtcoEmp.Text.Trim();
-                neg.NomComercial = txtnomComercial.Text.Trim();
-                neg.DirFiscal = txtdirFiscal.Text.Trim();
-                neg.Telefono = txttelefono.Text.Trim();
-                neg.PaginaWeb = txtpaginaWeb.Text.Trim();
-                neg.Co_usua_crea = "DCONDORI";
-                int i = DAT_ADMINISTRADOR.sp_tb_empresas_gr(neg);
-
-                limpiarControles();
-                
-                lblAlerta.Visible = true;
-                lblAlerta.Text = "Grabado";
-                lblAlerta.BackColor = Color.Green;
-                lblAlerta.ForeColor = Color.White;
-
-                
+                txtcoEmp.Text = dgvDatos.CurrentRow.Cells["coEmp"].Value.ToString().Trim();
+                txtrazSocial.Text = dgvDatos.CurrentRow.Cells["razSocial"].Value.ToString().Trim();
+                txtnomComercial.Text = dgvDatos.CurrentRow.Cells["nomComercial"].Value.ToString().Trim();
+                txtdirFiscal.Text = dgvDatos.CurrentRow.Cells["dirFiscal"].Value.ToString().Trim();
+                txttelefono.Text = dgvDatos.CurrentRow.Cells["telefono"].Value.ToString().Trim();
+                txtpaginaWeb.Text = dgvDatos.CurrentRow.Cells["paginaWeb"].Value.ToString().Trim();
             }
             catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //btnNuevo.Checked = true;
+                //btnGuardar.Checked = false;
+                //btnEditar.Checked = false;
+                //btnEliminar.Checked = false;
+                //btnCancelar.Checked = false;
+                //btnAuditoria.Checked = false;
+
+                opc = 1;
+                //fun.ERP_Habilitar_Botones(this, BTN_NUEVO, BTN_GRABAR, BTN_ELIMINAR, BTN_EDITAR, BTN_CANCELAR, BTN_LISTADO, BTN_AUDITORIA, false, Clases.Globales.Co_usuario, Clases.Globales.Co_sucu, Clases.Globales.Co_empresa, Clases.ERP_GLOBALES.formpermisos);
+                fun.Limpiar_Controles(this);
+                fun.Habilitar_Controles(this, true);
+                gbxListado.Enabled = false;
+                txtcoEmp.Enabled = true;
+                txtcoEmp.Select();
+                superTabControl1.SelectedTabIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            //btnNuevo.Checked = false;
+            //btnGuardar.Checked = true;
+            //btnEditar.Checked = false;
+            //btnEliminar.Checked = false;
+            //btnCancelar.Checked = false;
+            //btnAuditoria.Checked = false;
+
+            #region VALIDACIONES
+            if (String.IsNullOrEmpty(txtcoEmp.Text.Trim()))
+            {
+                MessageBoxEx.Show("* Ingresar el ruc de la empresa.",headerText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtcoEmp.Select();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtrazSocial.Text.Trim()))
+            {
+                MessageBoxEx.Show("* Ingresar la razón social de la empresa.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtrazSocial.Select();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtnomComercial.Text.Trim()))
+            {
+                MessageBoxEx.Show("* Ingresar el nombre comercial de la empresa.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtnomComercial.Select();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtdirFiscal.Text.Trim()))
+            {
+                MessageBoxEx.Show("* Ingresar la direcciónfiscal de la empresa.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtdirFiscal.Select();
+                return;
+            }
+            if (String.IsNullOrEmpty(txttelefono.Text.Trim()))
+            {
+                MessageBoxEx.Show("* Ingresar el N° de teléfono/celular de la empresa.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txttelefono.Select();
+                return;
+            }
+            if (String.IsNullOrEmpty(txtpaginaWeb.Text.Trim()))
+            {
+                MessageBoxEx.Show("* Ingresar la página web de la empresa.", headerText, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtpaginaWeb.Select();
+                return;
+            }
+            #endregion
+            grabar();
         }
 
         private void grabar()
         {
             try
             {
-                for (int x = 0; x < dgvDatos.Rows.Count; x++)
-                {
-                    neg.Opc = opc;
-                    neg.CoEmp = dgvDatos.Rows[x].Cells["coEmp"].Value.ToString().Trim();
-                    neg.RazSocial = dgvDatos.Rows[x].Cells["razSocial"].Value.ToString().Trim();
-                    neg.NomComercial = dgvDatos.Rows[x].Cells["nomComercial"].Value.ToString().Trim();
-                    neg.DirFiscal = dgvDatos.Rows[x].Cells["dirFiscal"].Value.ToString().Trim();
-                    neg.Telefono = dgvDatos.Rows[x].Cells["telefono"].Value.ToString().Trim();
-                    neg.PaginaWeb = dgvDatos.Rows[x].Cells["paginaWeb"].Value.ToString().Trim();
-                    neg.Co_usua_crea = "DCONDORI";
-                    int i = DAT_ADMINISTRADOR.sp_tb_empresas_gr(neg);
-                }
-                limpiarControles();                
-            }
-            catch (Exception ex)
-            {
-                MessageBoxEx.Show(ex.Message);
-            }
-        }
-        int rowIndex;
-        private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (dgvDatos.Columns[e.ColumnIndex].Name == "btnEditar")
-                {
-                    rowIndex = dgvDatos.CurrentRow.Index;
-                    lblAlerta.Visible = true;
-                    btnAgregarEmpresa.Enabled = false;
-                    btnGrabarEmpresa.Enabled = true;
-                    lblAlerta.Text = "Pendiente Grabar";
-                    lblAlerta.BackColor = Color.Red;
-                    lblAlerta.ForeColor = Color.White;
-
-                    Clases.ERP_GLOBALES.NombreAccion = "EDITAR";
-                    txtcoEmp.Text = dgvDatos.Rows[rowIndex].Cells["coEmp"].Value.ToString().Trim();
-                    txtrazSocial.Text = dgvDatos.Rows[rowIndex].Cells["razSocial"].Value.ToString().Trim();
-                    txtnomComercial.Text = dgvDatos.Rows[rowIndex].Cells["nomComercial"].Value.ToString().Trim();
-                    txtdirFiscal.Text = dgvDatos.Rows[rowIndex].Cells["dirFiscal"].Value.ToString().Trim();
-                    txttelefono.Text = dgvDatos.Rows[rowIndex].Cells["telefono"].Value.ToString().Trim();
-                    txtpaginaWeb.Text = dgvDatos.Rows[rowIndex].Cells["paginaWeb"].Value.ToString().Trim();
-                    txtcoEmp.Enabled = false;
-                }
-
-                if (dgvDatos.Columns[e.ColumnIndex].Name == "btnEliminar")
-                {
-                    if (MessageBoxEx.Show("¿Está seguro de eliminar esta empresa?","Rivera Diesel S.A.",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        neg.Opc = 3;
-                        neg.CoEmp = dgvDatos.CurrentRow.Cells["coEmp"].Value.ToString().Trim();
-                        neg.RazSocial = "";
-                        neg.NomComercial = "";
-                        neg.DirFiscal = "";
-                        neg.Telefono = "";
-                        neg.PaginaWeb = "";
-                        neg.Co_usua_crea = "";
-                        int i = DAT_ADMINISTRADOR.sp_tb_empresas_gr(neg);
-                        cargarForm();
-                    }
-                }
+                neg.Opc = opc;
+                neg.CoEmp = txtcoEmp.Text.Trim();
+                neg.RazSocial = txtrazSocial.Text.Trim();
+                neg.NomComercial = txtnomComercial.Text.Trim();
+                neg.DirFiscal = txtdirFiscal.Text.Trim();
+                neg.Telefono = txttelefono.Text.Trim();
+                neg.PaginaWeb = txtpaginaWeb.Text.Trim();
+                neg.Co_usua_crea = "DCONDORI";
+                int i = DAT_ADMINISTRADOR.sp_tb_adm_empresas_gr(neg);
+                cargarForm();
             }
             catch (Exception ex)
             {
@@ -251,28 +230,24 @@ namespace SISERP.ADMINISTRADOR
             }
         }
 
-        private async void btnTraerClienteSunat_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
             try
             {
-                string ruc = txtcoEmp.Text.Trim();
-                if (!string.IsNullOrEmpty(ruc))
-                {
-                    var datos = await ObtenerDatosDesdeSunatAsync(ruc);
-                    if (datos != null)
-                    {
-                        txtrazSocial.Text = datos.RazonSocial;
-                        txtdirFiscal.Text = datos.Direccion;
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se encontraron datos para el RUC proporcionado.");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, ingresa un RUC válido.");
-                }
+                //btnNuevo.Checked = false;
+                //btnGuardar.Checked = false;
+                //btnEditar.Checked = true;
+                //btnEliminar.Checked = false;
+                //btnCancelar.Checked = false;
+                //btnAuditoria.Checked = false;
+
+                opc = 2;
+                //fun.ERP_Habilitar_Botones(this, BTN_NUEVO, BTN_GRABAR, BTN_ELIMINAR, BTN_EDITAR, BTN_CANCELAR, BTN_LISTADO, BTN_AUDITORIA, false, Clases.Globales.Co_usuario, Clases.Globales.Co_sucu, Clases.Globales.Co_empresa, Clases.ERP_GLOBALES.formpermisos);
+                fun.Habilitar_Controles(this, true);
+                gbxListado.Enabled = false;
+                txtcoEmp.Enabled = false;
+                cargarDatos();
+                superTabControl1.SelectedTabIndex = 0;
             }
             catch (Exception ex)
             {
@@ -280,105 +255,61 @@ namespace SISERP.ADMINISTRADOR
             }
         }
 
-        private async Task<datosDelCliente> ObtenerDatosDesdeSunatAsync(string ruc)
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                try
-                {
-                    // Asegúrate de que la URL sea la correcta para acceder a SUNAT
-                    string url = $"https://api.sunat.gob.pe/v1/consorcio/{ruc}";
-                    var response = await client.GetAsync(url);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        var datosJson = await response.Content.ReadAsStringAsync();
-                        // Deserializa el JSON en un objeto de tipo DatosCliente
-                        return Newtonsoft.Json.JsonConvert.DeserializeObject<datosDelCliente>(datosJson);
-                    }
-                    else
-                    {
-                        // Maneja los errores de acuerdo a tu necesidad
-                        return null;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al obtener datos: {ex.Message}");
-                    return null;
-                }
-            }
-        }
-
-        public class datosDelCliente
-        {
-            public string RazonSocial { get; set; }
-            public string Direccion { get; set; }
-            // Agrega otros campos según la respuesta de SUNAT
-        }
-
-        private void btnGrabarEmpresa_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                //lblAlerta.Visible = false;
-                //lblAlerta.Text = "Grabado";
-                //lblAlerta.BackColor = Color.DarkGreen;
-                //lblAlerta.ForeColor = Color.White;
-                //grabar();
-                if (Clases.ERP_GLOBALES.NombreAccion == "EDITAR")
+                //btnNuevo.Checked = false;
+                //btnGuardar.Checked = false;
+                //btnEditar.Checked = false;
+                //btnEliminar.Checked = true;
+                //btnCancelar.Checked = false;
+                //btnAuditoria.Checked = false;
+
+                cargarDatos();
+                if (MessageBoxEx.Show("¿Está seguro de eliminar esta empresa?", headerText, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    opc = 2;
-                    dgvDatos.Rows[rowIndex].Cells["razSocial"].Value = txtrazSocial.Text.Trim();
-                    dgvDatos.Rows[rowIndex].Cells["nomComercial"].Value = txtnomComercial.Text.Trim();
-                    dgvDatos.Rows[rowIndex].Cells["dirFiscal"].Value = txtdirFiscal.Text.Trim();
-                    dgvDatos.Rows[rowIndex].Cells["telefono"].Value = txttelefono.Text.Trim();
-                    dgvDatos.Rows[rowIndex].Cells["paginaWeb"].Value = txtpaginaWeb.Text.Trim();
+                    opc = 3;
                     grabar();
-                    txtcoEmp.Enabled = true;
-                    btnAgregarEmpresa.Enabled = true;
-                    btnGrabarEmpresa.Enabled = false;
-                    lblAlerta.Text = "Grabado";
-                    lblAlerta.BackColor = Color.Green;
-                    lblAlerta.ForeColor = Color.White;
                 }
             }
             catch (Exception ex)
             {
                 MessageBoxEx.Show(ex.Message);
             }
-        }
-
-        private void btnLimpiarControles_Click(object sender, EventArgs e)
-        {
-            limpiarControles();
-            lblAlerta.Visible = false;
-        }
-
-        private void limpiarControles()
-        {
-            txtcoEmp.Enabled = true;
-            txtcoEmp.Text = "";
-            txtrazSocial.Text = "";
-            txtnomComercial.Text = "";
-            txtdirFiscal.Text = "";
-            txttelefono.Text = "";
-            txtpaginaWeb.Text = "";
-            txtcoEmp.Select();    
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            limpiarControles();
+            //btnNuevo.Checked = false;
+            //btnGuardar.Checked = false;
+            //btnEditar.Checked = false;
+            //btnEliminar.Checked = false;
+            //btnCancelar.Checked = false;
+            //btnAuditoria.Checked = false;
+
             cargarForm();
-            lblAlerta.Visible = false;
+        }
 
-            btnAgregarEmpresa.Enabled = true;
-            btnGrabarEmpresa.Enabled = false;
+        private void btnAuditoria_Click(object sender, EventArgs e)
+        {
+            //btnNuevo.Checked = false;
+            //btnGuardar.Checked = false;
+            //btnEditar.Checked = false;
+            //btnEliminar.Checked = false;
+            //btnCancelar.Checked = false;
+            //btnAuditoria.Checked = true;
+        }
 
-            lblAlerta.Text = "Grabado";
-            lblAlerta.BackColor = Color.Green;
-            lblAlerta.ForeColor = Color.White;
+        private void dgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cargarDatos();
+        }
+
+        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cargarDatos();
+            superTabControl1.SelectedTabIndex = 0;
         }
     }
 }
