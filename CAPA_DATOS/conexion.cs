@@ -12,7 +12,9 @@ namespace CAPA_DATOS
         {
             get
             {
-                return "server=localhost;database=bd_siserp;Uid=root;pwd=;";
+                //return "server=localhost;database=bd_siserp;Uid=root;pwd=;";
+                //return "server=root;database=bd_siserp;Uid=root;pwd=123456789;";
+                return @"server=localhost;database=bd_siserp;Uid=root;pwd=;";
             }
         }
     }

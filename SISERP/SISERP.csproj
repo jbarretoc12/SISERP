@@ -134,6 +134,24 @@
     </Compile>
     <Compile Include="Clases\ERP_FUNCIONES.cs" />
     <Compile Include="Clases\ERP_GLOBALES.cs" />
+    <Compile Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE.Designer.cs">
+      <DependentUpon>ERP_CON_PLAN_CONTABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE_SUB_CUENTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE_SUB_CUENTAS.Designer.cs">
+      <DependentUpon>ERP_CON_PLAN_CONTABLE_SUB_CUENTAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE_TIPO_CUENTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE_TIPO_CUENTA.Designer.cs">
+      <DependentUpon>ERP_CON_PLAN_CONTABLE_TIPO_CUENTA.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRINCIPAL\ERP_ACCESO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +162,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ADMINISTRADOR\ERP_ADM_EMPRESAS.resx">
       <DependentUpon>ERP_ADM_EMPRESAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE.resx">
+      <DependentUpon>ERP_CON_PLAN_CONTABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE_SUB_CUENTAS.resx">
+      <DependentUpon>ERP_CON_PLAN_CONTABLE_SUB_CUENTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONTABILIDAD\ERP_CON_PLAN_CONTABLE_TIPO_CUENTA.resx">
+      <DependentUpon>ERP_CON_PLAN_CONTABLE_TIPO_CUENTA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRINCIPAL\ERP_ACCESO.resx">
       <DependentUpon>ERP_ACCESO.cs</DependentUpon>

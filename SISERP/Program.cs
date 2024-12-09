@@ -16,7 +16,7 @@ namespace SISERP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ADMINISTRADOR.ERP_ADM_EMPRESAS());
+            Application.Run(new CONTABILIDAD.ERP_CON_PLAN_CONTABLE_SUB_CUENTAS());
         }
     }
 }

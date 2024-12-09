@@ -34,5 +34,17 @@ namespace SISERP.PRINCIPAL
                 MessageBoxEx.Show(ex.Message);
             }
         }
+
+        private void listar(int opcion, string criterio)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(ex.Message);
+            }
+        }
     }
 }

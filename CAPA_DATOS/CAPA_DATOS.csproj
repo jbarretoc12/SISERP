@@ -95,6 +95,9 @@
   <ItemGroup>
     <Compile Include="ADMINISTRADOR\DAT_ADMINISTRADOR.cs" />
     <Compile Include="conexion.cs" />
+    <Compile Include="CONTABILIDAD\DAT_CON_PLAN_CONTABLE.cs" />
+    <Compile Include="CONTABILIDAD\DAT_CON_PLAN_CONTABLE_SUB_CUENTAS.cs" />
+    <Compile Include="CONTABILIDAD\DAT_CON_PLAN_CONTABLE_TIPO_CUENTA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

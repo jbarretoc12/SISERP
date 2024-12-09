@@ -69,23 +69,25 @@
             this.btnAuditoria = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.gbxListado = new System.Windows.Forms.GroupBox();
             this.btnConsultar = new DevComponents.DotNetBar.ButtonX();
             this.txtFiltro = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.superTabControlPanel2.SuspendLayout();
-            this.gbxListado.SuspendLayout();
             this.superTabControlPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.superTabControlPanel2.SuspendLayout();
+            this.gbxListado.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelX1
@@ -428,7 +430,7 @@
             this.btnTraerClienteSunat.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTraerClienteSunat.Location = new System.Drawing.Point(609, 95);
             this.btnTraerClienteSunat.Name = "btnTraerClienteSunat";
-            this.btnTraerClienteSunat.Size = new System.Drawing.Size(105, 23);
+            this.btnTraerClienteSunat.Size = new System.Drawing.Size(121, 23);
             this.btnTraerClienteSunat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnTraerClienteSunat.Symbol = "";
             this.btnTraerClienteSunat.SymbolSize = 10F;
@@ -588,6 +590,54 @@
             this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.Office2010BackstageBlue;
             this.superTabControl1.Text = "superTabControl1";
             // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.groupBox1);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(806, 368);
+            this.superTabControlPanel1.TabIndex = 1;
+            this.superTabControlPanel1.TabItem = this.superTabItem1;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.btnTraerClienteSunat);
+            this.groupBox1.Controls.Add(this.txtrazSocial);
+            this.groupBox1.Controls.Add(this.labelX4);
+            this.groupBox1.Controls.Add(this.txtpaginaWeb);
+            this.groupBox1.Controls.Add(this.txtnomComercial);
+            this.groupBox1.Controls.Add(this.labelX1);
+            this.groupBox1.Controls.Add(this.txtdirFiscal);
+            this.groupBox1.Controls.Add(this.labelX6);
+            this.groupBox1.Controls.Add(this.labelX3);
+            this.groupBox1.Controls.Add(this.txtcoEmp);
+            this.groupBox1.Controls.Add(this.labelX5);
+            this.groupBox1.Controls.Add(this.txttelefono);
+            this.groupBox1.Controls.Add(this.labelX2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(806, 368);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(609, 142);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 128);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // superTabItem1
+            // 
+            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem1.GlobalItem = false;
+            this.superTabItem1.Name = "superTabItem1";
+            this.superTabItem1.Text = "Datos Generales";
+            // 
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.Controls.Add(this.gbxListado);
@@ -667,45 +717,6 @@
             this.superTabItem2.Name = "superTabItem2";
             this.superTabItem2.Text = "Listado";
             // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.groupBox1);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(806, 368);
-            this.superTabControlPanel1.TabIndex = 1;
-            this.superTabControlPanel1.TabItem = this.superTabItem1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnTraerClienteSunat);
-            this.groupBox1.Controls.Add(this.txtrazSocial);
-            this.groupBox1.Controls.Add(this.labelX4);
-            this.groupBox1.Controls.Add(this.txtpaginaWeb);
-            this.groupBox1.Controls.Add(this.txtnomComercial);
-            this.groupBox1.Controls.Add(this.labelX1);
-            this.groupBox1.Controls.Add(this.txtdirFiscal);
-            this.groupBox1.Controls.Add(this.labelX6);
-            this.groupBox1.Controls.Add(this.labelX3);
-            this.groupBox1.Controls.Add(this.txtcoEmp);
-            this.groupBox1.Controls.Add(this.labelX5);
-            this.groupBox1.Controls.Add(this.txttelefono);
-            this.groupBox1.Controls.Add(this.labelX2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(806, 368);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            // 
-            // superTabItem1
-            // 
-            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
-            this.superTabItem1.GlobalItem = false;
-            this.superTabItem1.Name = "superTabItem1";
-            this.superTabItem1.Text = "Datos Generales";
-            // 
             // ERP_ADM_EMPRESAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -718,18 +729,20 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ERP_ADM_EMPRESAS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ERP_ADM_EMPRESAS";
             this.Load += new System.EventHandler(this.ERP_ADM_EMPRESAS_Load);
             this.panelEx1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel2.ResumeLayout(false);
-            this.gbxListado.ResumeLayout(false);
-            this.gbxListado.PerformLayout();
             this.superTabControlPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.gbxListado.ResumeLayout(false);
+            this.gbxListado.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -782,5 +795,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn co_usua_modi;
         private System.Windows.Forms.DataGridViewTextBoxColumn fe_usua_modi;
         private DevComponents.DotNetBar.ButtonX btnConsultar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
